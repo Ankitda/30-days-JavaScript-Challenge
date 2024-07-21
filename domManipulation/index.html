@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            text-align: center;
+            background-color: aqua;
+            padding: 20px;
+        }
+        #tagetDiv{
+            text-align: center;
+            padding: 50px 0px;
+        }
+
+        #list{
+            text-align: left;
+        }
+
+        .old-class{
+            background-color: black;
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+        }
+
+        .new-class{
+            background-color: blue;
+            width: 100%;
+            height: 100px;
+            padding: 100px 0px;
+        }
+
+        .change-class{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            background-color: rgba(20, 223, 138, 0.562);
+            margin: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div style="border: 1px solid black; padding: 20px; text-align: center; margin-bottom: 10px;">
+        <h1>Manipulating Elements</h1>
+        <div class="container">
+            <h1 id="header">This is a test of html and javascript</h1>
+    
+            <p>welcome to this test</p>
+    
+            <button onclick="changeBgColor()">change content</button>
+        </div>
+    </div>
+
+    <div style="border: 1px solid black; padding: 20px; text-align: center; margin-bottom: 10px;">
+        <h1>Creating and Appending Elements</h1>
+        <div id="tagetDiv">
+    
+            <ul id="list">
+    
+            </ul>
+    
+            <button onclick="appendDiv()">create div</button>
+    
+        </div>
+    </div>
+
+    <div style="border: 1px solid black; padding: 20px; text-align: center; margin-bottom: 10px;">
+        <h1>Removing Elements</h1>
+        <div style="width: 100%; text-align: center;">
+            <p id="para">
+                <span style="display: block;">Remove me from this page</span>
+            </p>
+            <p id="para1">
+                Remove the last child from these list
+                <span style="display: block;">first child</span>
+                <span style="display: block;">second child</span>
+                <span style="display: block;">third child</span>
+                <span style="display: block;">last child</span>
+            </p>
+            <button onclick="removeMe()">Remove me</button>
+        </div>
+    </div>
+
+    <div style="border: 1px solid black; padding: 20px; text-align: center; margin-bottom: 10px;">
+        <h1>Modifying Attributes and Classes</h1>
+        <div id="target-div" class="old-class">This is a div.</div>
+        <button onclick="changeDivClass()">Change Div Class</button>
+    
+        <div id="target-class">
+            <p>hello world</p>
+            <button onclick="addClass()">see changes</button>
+            <button onclick="removeClass()">remove changes</button>
+        </div>
+    </div>
+
+    <div style="border: 1px solid black; padding: 20px; text-align: center; margin-bottom: 10px;">
+        <h1>Event Handling</h1>
+        <p id="p1">Change the content of this paragrapgh</p>
+        <button id="change">Change</button>
+    
+        <div id="border" style="border: 1px solid black; width: 100%; height: 200px; padding-top: 20%; margin-top: 20px;">
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
