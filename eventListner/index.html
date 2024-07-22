@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container{
+            border: 1px solid black; 
+            padding: 20px; 
+            text-align: center; 
+            margin-bottom: 10px;
+        }
+
+        .button{
+            padding: 8px 12px; 
+            background-color: aqua; 
+            color: #1d1b1b; 
+            outline: none; 
+            border: 0px; border-radius: 40px; 
+            cursor: pointer; 
+        }
+
+        .input{
+            padding: 8px; 
+            border-radius: 40px; 
+            color: rgb(88, 85, 85); 
+            border-color: rgb(88, 85, 85);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 style="text-decoration: underline;">Basic Event Handling</h1>
+        <div>
+            <h1 id="header">Change the text</h1>
+    
+            <button id="changeText" class="button">change content</button>
+
+            <div style="margin-top: 20px;">
+                <div style="margin-bottom: 20px;">
+                    <img id="img" src="https://picsum.photos/200" alt="picsum"> 
+                </div>
+                <button id="changeImg" class="button">Toggle Double click</button>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="container">
+        <h1 style="text-decoration: underline;">Mouse Events</h1>
+        <div id="target-container" style="width: auto; height: 200px; background-color: rebeccapurple;">
+                       
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 style="text-decoration: underline;">Keyboard Events</h1>
+
+        <p id="para"></p>
+        <input type="text" id="input" placeholder="Enter text here" class="input">
+    </div>
+    
+    <div class="container">
+        <h1 style="text-decoration: underline;">Form Events</h1>
+        <form id="form">
+            <input type="text" placeholder="Enter Name" name="name" class="input">
+            <input type="password" placeholder="Enter Password" name="password" class="input">
+            <input type="submit" value="Submit" class="button">
+        </form>
+
+        <div style="margin-top: 10px;">
+            <p style="margin-bottom: 10px;" id="showValue">Selected value will be shown here</p>
+            <select id="dropdown" class="input">
+                <option value="Ferrari">Ferrari</option>
+                <option value="Lamborgini">Lamborgini</option>
+                <option value="Buggati">Buggati</option>
+            </select>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1 style="text-decoration: underline;">Event Delegation</h1>
+
+        <ul id="list" style="text-align: left; cursor: pointer;">
+            <li>Mango</li>
+            <li>Apple</li>
+            <li>Tamato</li>
+            <li>Orange</li>
+        </ul>
+
+        <div id="parentContainer" style="width: 500px; height: 200px; border: 1px solid #ddd; margin-right: auto; margin-left: auto; margin-bottom: 10px; padding: 40px;">
+
+        </div>
+        <button id="addElement" class="button">Add Buttons</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
