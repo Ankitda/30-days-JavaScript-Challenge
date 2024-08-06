@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local and Session Storage Example</title>
+</head>
+<body>
+    <h1>Local Storage Example</h1>
+    <input type="text" id="inputValue" placeholder="Enter some text">
+    <button onclick="saveToLocalStorage()">Save to Local Storage</button>
+    <button onclick="retrieveFromLocalStorage()">Retrieve from Local Storage</button>
+    <p id="outputValue"></p>
+
+    <h1>Local Storage Object Example</h1>
+    <input type="text" id="name" placeholder="Enter your name">
+    <input type="number" id="age" placeholder="Enter your age">
+    <button onclick="saveObjectToLocalStorage()">Save Object to Local Storage</button>
+    <button onclick="retrieveObjectFromLocalStorage()">Retrieve Object from Local Storage</button>
+    <p id="outputObject"></p>
+
+    <h1>Local Storage Form Example</h1>
+    <form onsubmit="saveFormData(event)">
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="name" required>
+        <br>
+        <label for="useremail">Email:</label>
+        <input type="email" id="useremail" name="email" required>
+        <br>
+        <button type="submit">Save to Local Storage</button>
+    </form>
+    <button onclick="removeItem()">Remove Item</button>
+    <h2 id="removeText">Before Removing Data</h2>
+    <p id="outputData"></p>
+
+    <h1>Session Storage Example</h1>
+    <input type="text" id="sessionInput" placeholder="Enter some text">
+    <button onclick="saveToSessionStorage()">Save to Session Storage</button>
+    <button onclick="retrieveFromSessionStorage()">Retrieve from Session Storage</button>
+    <p id="showData"></p>
+
+    <h1>Session Storage Object Example</h1>
+    <input type="text" id="sessionName" placeholder="Enter your name">
+    <input type="number" id="sessionAge" placeholder="Enter your age">
+    <button onclick="saveObjectToSessionStorage()">Save Object to Session Storage</button>
+    <button onclick="retrieveObjectFromSessionStorage()">Retrieve Object from Session Storage</button>
+    <p id="showObject"></p>
+
+    <h1>session Storage Form Example</h1>
+    <form onsubmit="saveSessionData(event)">
+        <input type="text" id="sessionFormName" placeholder="Enter your name" required>
+        <input type="email" id="sessionFormEmail" placeholder="Enter your email" required>
+        <button type="submit">Save to Session Storage</button>
+    </form>
+    <button onclick="removeSessionItem()">Remove Item</button>
+    <h2 id="sessionTitle">Before Removing Data</h2>
+    <p id="outputSessionData"></p>
+
+    <h1>Local and Session Storage Example</h1>
+    <input type="text" id="inputstorageKey" placeholder="Enter key">
+    <input type="text" id="inputstorageValue" placeholder="Enter value">
+    <button onclick="saveToStorage()">Save to Storage</button>
+    <button onclick="retrieveFromStorage()">Retrieve from Storage</button>
+
+    <h1>Clear Storage Example</h1>
+    <button onclick="clearAllStorage()">Clear All Storage</button>
+
+    <script src="./script.js"></script>
+</body>
+</html>
