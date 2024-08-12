@@ -1,3 +1,11 @@
+/**
+ * Checks if a given substring is present in a string and in the correct order.
+ *
+ * @param {string} str - The string to search in.
+ * @param {string} subString - The substring to search for.
+ * @return {boolean} True if the substring is present in the correct order, false otherwise.
+ */
+
 function checkSubstring(str, subString) {
 
     if(subString.length === 1 && str.includes(subString[0])) {
