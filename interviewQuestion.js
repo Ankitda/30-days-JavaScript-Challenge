@@ -29,4 +29,61 @@ function checkSubstring(str, subString) {
     return true;
 }
 
-console.log(checkSubstring("abcdefg", "fg"));
+// console.log(checkSubstring("abcdefg", "fg"));
+
+
+// check if two strings are anagrams of each other
+
+function checkAnagram(str1, str2){
+    if(str1.length !== str2.length){
+        return false;
+    }
+    const arr1 = new Array(256).fill(0);
+    const arr2 = new Array(256).fill(0);
+
+    for(let i = 0; i < str1.length; i++){
+        arr1[str1[i].charCodeAt(0)]++;
+    }
+
+    for(let i = 0; i < str2.length; i++){
+        arr2[str2[i].charCodeAt(0)]++;
+    }
+
+    for(let i = 0; i < arr1.length; i++){
+        if(arr1[i] !== arr2[i]){
+            return false;
+        }
+    }
+
+    return true;
+}
+
+// console.log(checkAnagram("abc", "bcad"));
+
+// write a code for rotating an array by d elements
+
+function rotateArrayLeft(arr, d){
+    let originalArray = arr;
+    let tempArr = [];
+    for(let i=0; i<d; i++){
+        tempArr[i] = originalArray[originalArray.length-1];
+        originalArray.length = originalArray.length - 1;
+    }
+    tempArr = [...tempArr, ...originalArray]; 
+    return tempArr;
+}
+
+console.log(rotateArrayLeft([1, 2, 3, 4, 5], 2))
+
+function rotateArrayRight(arr, d){
+    let tempArr = [];
+    for(let i = d; i<arr.length; i++){
+        tempArr[tempArr.length] = arr[i];
+    }
+    for(let j=0; j<d; j++){
+        tempArr[tempArr.length] = arr[j];
+    }
+    return tempArr;
+}
+
+console.log(rotateArrayRight([1, 2, 3, 4, 5], 2));
